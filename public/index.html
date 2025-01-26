@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Entry Application</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Data Entry Application</h1>
+    <div class="nav-buttons">
+      <button onclick="showView('formView')">Add / Edit Entry</button>
+      <button onclick="showView('tableView')">View Entries</button>
+      <button onclick="downloadExcel()">Export Data</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Form View -->
+    <div id="formView" class="view active">
+      <h2>Upload Excel File</h2>
+      <input type="file" id="fileInput" accept=".xlsx, .xls" onchange="handleFileUpload(event)" />
+      <h2>Add / Edit Entry</h2>
+      <form id="entryForm">
+        <div class="field">
+          <label>Exercise</label>
+          <input type="text" id="exercise" />
+        </div>
+        <div class="field">
+          <label>Year</label>
+          <input type="text" id="year" />
+        </div>
+        <div class="field">
+          <label>Group</label>
+          <input type="text" id="group" />
+        </div>
+        <div class="field">
+          <label>Submitted Date</label>
+          <input type="date" id="submitted" />
+        </div>
+        <div class="field">
+          <label>Ref #</label>
+          <input type="text" id="refNo" />
+        </div>
+        <div class="field">
+          <label>Type</label>
+          <input type="text" id="type" />
+        </div>
+        <div class="field">
+          <label>Keywords</label>
+          <input type="text" id="keywords" />
+        </div>
+        <div class="field full-width">
+          <label>Question</label>
+          <textarea id="question" rows="3"></textarea>
+        </div>
+        <div class="field full-width">
+          <label>Answer</label>
+          <textarea id="answer" rows="3"></textarea>
+        </div>
+        <button type="button" onclick="saveEntry()">Save Entry</button>
+      </form>
+    </div>
+
+    <!-- Table View -->
+    <div id="tableView" class="view">
+      <input type="text" class="search-bar" id="searchBar" placeholder="Search entries..." oninput="searchEntries()" />
+      <table>
+        <thead>
+          <tr>
+            <th>Exercise</th>
+            <th>Year</th>
+            <th>Group</th>
+            <th>Submitted</th>
+            <th>Ref #</th>
+            <th>Type</th>
+            <th>Keywords</th>
+            <th>Question</th>
+            <th>Answer</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="entriesTableBody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+  
+</body>
+</html>

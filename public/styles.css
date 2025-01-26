@@ -1,0 +1,197 @@
+/* Universal styles */
+body {
+  font-family: 'Inter', sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  color: #333;
+  background-color: #FAFEFE;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #D7F0D0;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  background-color: #5E95B0;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #486D80;
+}
+
+/* Views */
+.view {
+  display: none;
+  margin-bottom: 20px;
+}
+
+.view.active {
+  display: block;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form .field {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+form .field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+form .field input[type="text"],
+form .field input[type="date"],
+form .field textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  width: 100%;
+}
+
+form .field textarea {
+  resize: none; /* Disable resizing */
+}
+
+form .field.full-width {
+  flex: 1 1 100%;
+}
+
+/* Form buttons */
+form button {
+  background-color: #B5EAD7;
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: flex-end;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: #A4DAC9;
+}
+
+/* Search bar */
+.search-bar {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+table th {
+  background-color: #E7F3E9;
+  font-weight: bold;
+}
+
+table td {
+  background-color: #ffffff;
+}
+
+/* Table actions */
+table td button {
+  background-color: #FEC8D8; /* Pastel pink */
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-right: 5px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  margin: 5px 2px;
+}
+
+table td button:hover {
+  background-color: #fdbacb; /* Slightly darker pink */
+}
+
+table td button.edit-btn {
+  background-color: #A3CEF1; /* Pastel blue */
+}
+
+table td button.edit-btn:hover {
+  background-color: #92bde0; /* Slightly darker blue */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  form .field {
+    flex: 1 1 100%;
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+  }
+}
