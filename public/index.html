@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Entry Application</title>
+  <title>Ken's Super Duper Response System</title>
   <link href="styles.css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Data Entry Application</h1>
+    <h1>Ken's Super Duper Response System</h1>
     <div class="nav-buttons">
       <button onclick="showView('formView')">Add / Edit Entry</button>
       <button onclick="showView('tableView')">View Entries</button>
@@ -20,7 +20,7 @@
     <!-- Form View -->
     <div id="formView" class="view active">
       <h2>Upload Excel File</h2>
-      <input type="file" id="fileInput" accept=".xlsx, .xls" onchange="handleFileUpload(event)" />
+      <input type="file" id="fileInput" accept=".xlsx, .xls" onchange="handleFileUpload(event)" class="uploadFileButton" />
       <h2>Add / Edit Entry</h2>
       <form id="entryForm">
         <div class="field">

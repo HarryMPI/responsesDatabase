@@ -215,3 +215,15 @@ th button{
   cursor: pointer;
   color: #666;
 }
+
+.uploadFileButton {
+  background-color: #B5EAD7;
+  color: #333;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background-color 0.2s ease;
+}
