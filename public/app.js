@@ -106,12 +106,15 @@ function deleteEntry(index) {
   displayEntries();
 }
 
-// Search entries
 function searchEntries() {
-  const searchTerm = document.getElementById("searchBar").value.toLowerCase();
+  const searchInput = document.getElementById("searchBar").value.toLowerCase();
+  const searchTerms = searchInput.split(",").map((term) => term.trim()); // Split by commas and trim whitespace
+
   const filteredEntries = entries.filter((entry) =>
-    Object.values(entry).some((value) =>
-      String(value).toLowerCase().includes(searchTerm)
+    searchTerms.every((term) =>
+      Object.values(entry).some((value) =>
+        String(value).toLowerCase().includes(term)
+      )
     )
   );
 
