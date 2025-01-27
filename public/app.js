@@ -191,3 +191,19 @@ function sortTable(columnIndex) {
   tableBody.innerHTML = "";
   rows.forEach((row) => tableBody.appendChild(row));
 }
+
+
+// Warn the user before leaving the page
+window.addEventListener("beforeunload", (event) => {
+  const message = "Make sure to export and save your changes before leaving!";
+
+  // Required to trigger the warning in most browsers
+  event.preventDefault();
+
+  // Deprecated but still needed for compatibility
+  event.returnValue = message;
+
+  // Note: Modern browsers ignore the `message` content
+  return message; 
+});
+
