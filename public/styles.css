@@ -1,7 +1,7 @@
 /* Universal styles */
 body {
   font-family: 'Inter', sans-serif;
-  max-width: 1200px;
+  max-width: 85%;
   margin: 20px auto;
   padding: 20px;
   color: #333;
@@ -83,12 +83,14 @@ form .field label {
 
 form .field input[type="text"],
 form .field input[type="date"],
-form .field textarea {
+form .field textarea,
+form .field select {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1em;
   width: 100%;
+  background-color: #fff;
 }
 
 form .field textarea {
@@ -99,7 +101,11 @@ form .field.full-width {
   flex: 1 1 100%;
 }
 
-/* Form buttons */
+/* Dropdown field */
+form .field select {
+  cursor: pointer;
+}
+
 form button {
   background-color: #B5EAD7;
   color: #333;
@@ -141,19 +147,20 @@ table td {
   border: 1px solid #ccc;
   padding: 12px;
   text-align: left;
+  vertical-align: top;
   font-size: 0.95em;
 }
 
 table th {
   background-color: #E7F3E9;
   font-weight: bold;
+  text-wrap-mode: nowrap;
 }
 
 table td {
   background-color: #ffffff;
 }
 
-/* Table actions */
 table td button {
   background-color: #FEC8D8; /* Pastel pink */
   color: #333;
@@ -164,8 +171,8 @@ table td button {
   font-size: 0.9em;
   margin-right: 5px;
   transition: background-color 0.2s ease;
-  width: 100%;
-  margin: 5px 2px;
+  width: 75px;
+  margin: 5px;
 }
 
 table td button:hover {
@@ -194,4 +201,17 @@ table td button.edit-btn:hover {
   header h1 {
     font-size: 1.2em;
   }
+}
+
+.dateCol {
+  min-width: 150px;
+}
+
+th button{
+  margin-left: 5px; /* Add some space between text and button */
+  background: none;
+  border: none;
+  font-size: 0.8em;
+  cursor: pointer;
+  color: #666;
 }

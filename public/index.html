@@ -24,8 +24,13 @@
       <h2>Add / Edit Entry</h2>
       <form id="entryForm">
         <div class="field">
-          <label>Exercise</label>
-          <input type="text" id="exercise" />
+          <label for="exercise">Exercise</label>
+          <select id="exercise">
+            <option value="Annual Review">Annual Review</option>
+            <option value="OIA">OIA</option>
+            <option value="Select Committee">Select Committee</option>
+            <option value="WPQ">WPQ</option>
+          </select>
         </div>
         <div class="field">
           <label>Year</label>
@@ -36,6 +41,10 @@
           <input type="text" id="group" />
         </div>
         <div class="field">
+          <label>Received Date</label>
+          <input type="date" id="received" />
+        </div>
+        <div class="field">
           <label>Submitted Date</label>
           <input type="date" id="submitted" />
         </div>
@@ -44,8 +53,11 @@
           <input type="text" id="refNo" />
         </div>
         <div class="field">
-          <label>Type</label>
-          <input type="text" id="type" />
+          <label for="type">Type</label>
+          <select id="type">
+            <option value="Original">Original</option>
+            <option value="Revised">Revised</option>
+          </select>
         </div>
         <div class="field">
           <label>Keywords</label>
@@ -69,19 +81,20 @@
       <table>
         <thead>
           <tr>
-            <th>Exercise</th>
-            <th>Year</th>
-            <th>Group</th>
-            <th>Submitted</th>
-            <th>Ref #</th>
-            <th>Type</th>
-            <th>Keywords</th>
-            <th>Question</th>
-            <th>Answer</th>
+            <th onclick="sortTable(0)">Exercise <button>🔽</button></th>
+            <th onclick="sortTable(1)">Year <button>🔽</button></th>
+            <th onclick="sortTable(2)">Group <button>🔽</button></th>
+            <th class="dateCol" onclick="sortTable(3)">Received <button>🔽</button></th>
+            <th class="dateCol" onclick="sortTable(4)">Submitted <button>🔽</button></th>
+            <th onclick="sortTable(5)">Ref # <button>🔽</button></th>
+            <th onclick="sortTable(6)">Type <button>🔽</button></th>
+            <th onclick="sortTable(7)">Keywords <button>🔽</button></th>
+            <th onclick="sortTable(8)">Question <button>🔽</button></th>
+            <th onclick="sortTable(9)">Answer <button>🔽</button></th>
             <th>Actions</th>
           </tr>
         </thead>
-        <tbody id="entriesTableBody"></tbody>
+                <tbody id="entriesTableBody"></tbody>
       </table>
     </div>
   </main>
