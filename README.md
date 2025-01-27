@@ -101,11 +101,3 @@ This project is licensed under the MIT License.
 
 
 ---
-
-### Key Updates in the README:
-1. **New Edit Functionality**: Added steps for editing existing entries.
-2. **Excel Integration**: Updated details for upload/download of Excel files.
-3. **Firebase Hosting Setup**: Detailed instructions for running locally and deploying.
-4. **Screenshots**: Placeholders for images (`path/to/add-edit-screenshot.png`) that you can replace with actual screenshots of the app.
-
-Let me know if you need any additional updates!
